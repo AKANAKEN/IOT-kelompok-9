@@ -140,7 +140,7 @@
 #include <LiquidCrystal_I2C.h>
 #include <Servo.h>
 
-// Konfigurasi LCD I2C
+// config untuk LCD I2C
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 const int trigPin = 5;
@@ -191,10 +191,10 @@ void displayScrollingText(const char* message) {
     // Cek tombol reset selama pengguliran
     if (digitalRead(resetPin) == LOW) {
       handleReset();
-      return; // Keluar dari fungsi pengguliran jika reset dilakukan
+      return; 
     }
 
-    // Non-blocking scrolling delay
+    // Non-blocking scrolling delay 
     if (millis() - lastScrollTime >= scrollDelay) {
       lastScrollTime = millis();
       lcd.clear();
