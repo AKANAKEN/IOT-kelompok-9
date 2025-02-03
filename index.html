@@ -31,13 +31,14 @@
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Component</a></li>
                     <li class="nav-item"><a class="nav-link" href="#steps">Steps</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Component</a></li>
                     <li class="nav-item"><a class="nav-link" href="#diagram">Diagram</a></li>
                     <li class="nav-item"><a class="nav-link" href="#demo">Demo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                   
                 </ul>
             </div>
         </div>
@@ -52,11 +53,99 @@
                 </div>
                 <div class="col-lg-8 align-self-baseline">
                     <p class="text-white-75 mb-5">Solusi Cerdas untuk Kebersihan Tangan Anda</p>
-                    <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
+                    <a class="btn btn-primary btn-xl" href="#team">Find Out More</a>
                 </div>
             </div>
         </div>
     </header>
+
+      <!-- Team Members Section -->
+      <section class="page-section " id="team">
+        <div class="container py-5">
+            <h2 class="text-center mt-0">Our Team</h2>
+            <h5 class="text-center mt-0">Kelompok 9</h5>
+            <hr class="divider" />
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 text-center">
+
+                <!-- Card for Muhammad Nur Ilyas -->
+                <div class="col">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <img src="assets/img/Ilyas.jpg" class="team-img" alt="Muhammad Nur Ilyas">
+                            <h5 class="card-title mt-3">Muhammad Nur Ilyas</h5>
+                            <p class="card-text">NIM: 2022310075</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card for Sugiarto Catrio Mulyo Rachmanto -->
+                <div class="col">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <img src="assets/img/Rio.jpg" class="team-img" alt="Sugiarto Catrio Mulyo Rachmanto">
+                            <h5 class="card-title mt-3">Sugiarto Catrio Mulyo Rachmanto</h5>
+                            <p class="card-text">NIM: 2022310030</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card for Kevin Mubarak -->
+                <div class="col">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <img src="assets/img/Kevin.jpg" class="team-img" alt="Kevin Mubarak">
+                            <h5 class="card-title mt-3">Kevin Mubarak</h5>
+                            <p class="card-text">NIM: 2022310003</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card for Ikhwan Ningrattama -->
+                <div class="col">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <img src="assets/img/Ikhwan.png" class="team-img" alt="Ikhwan Ningrattama">
+                            <h5 class="card-title mt-3">Ikhwan Ningrattama</h5>
+                            <p class="card-text">NIM: 2022310044</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Tambahkan CSS berikut di dalam file styles.css atau dalam tag <style> di HTML -->
+    <style>
+        .team-img {
+            width: 150px;
+            /* Ukuran gambar */
+            height: 150px;
+            /* 1:1 aspect ratio */
+            border-radius: 50%;
+            /* Membuat gambar lingkaran */
+            object-fit: cover;
+            /* Menjaga proporsi wajah */
+            border: 5px solid #ddd;
+            /* Opsional: Menambahkan border */
+            padding: 5px;
+            /* Opsional: Memberi ruang di dalam border */
+        }
+
+        .card {
+            align-items: center;
+            /* Pusatkan konten di dalam kartu */
+            text-align: center;
+            background: none;
+        }
+
+        .card-body {
+            padding-top: 10px;
+        }
+    </style>
+
+
+
     <!-- About-->
     <section class="page-section bg-dark text-white" id="about">
         <div class="container px-4 px-lg-5">
@@ -425,96 +514,13 @@
         </div>
     </section>
 
-    <!-- Team Members Section -->
-    <section class="page-section bg-dark text-white" id="team">
-        <div class="container py-5">
-            <h2 class="text-center mt-0">Our Team</h2>
-            <h5 class="text-center mt-0">Kelompok 9</h5>
-            <hr class="divider" />
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 text-center">
-
-                <!-- Card for Muhammad Nur Ilyas -->
-                <div class="col">
-                    <div class="card shadow-sm border-0">
-                        <div class="card-body">
-                            <img src="assets/img/Ilyas.jpg" class="team-img" alt="Muhammad Nur Ilyas">
-                            <h5 class="card-title mt-3">Muhammad Nur Ilyas</h5>
-                            <p class="card-text">NIM: 2022310075</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card for Sugiarto Catrio Mulyo Rachmanto -->
-                <div class="col">
-                    <div class="card shadow-sm border-0">
-                        <div class="card-body">
-                            <img src="assets/img/Rio.jpg" class="team-img" alt="Sugiarto Catrio Mulyo Rachmanto">
-                            <h5 class="card-title mt-3">Sugiarto Catrio Mulyo Rachmanto</h5>
-                            <p class="card-text">NIM: 2022310030</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card for Kevin Mubarak -->
-                <div class="col">
-                    <div class="card shadow-sm border-0">
-                        <div class="card-body">
-                            <img src="assets/img/Kevin.jpg" class="team-img" alt="Kevin Mubarak">
-                            <h5 class="card-title mt-3">Kevin Mubarak</h5>
-                            <p class="card-text">NIM: 2022310003</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card for Ikhwan Ningrattama -->
-                <div class="col">
-                    <div class="card shadow-sm border-0">
-                        <div class="card-body">
-                            <img src="assets/img/Ikhwan.png" class="team-img" alt="Ikhwan Ningrattama">
-                            <h5 class="card-title mt-3">Ikhwan Ningrattama</h5>
-                            <p class="card-text">NIM: 2022310044</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Tambahkan CSS berikut di dalam file styles.css atau dalam tag <style> di HTML -->
-    <style>
-        .team-img {
-            width: 150px;
-            /* Ukuran gambar */
-            height: 150px;
-            /* 1:1 aspect ratio */
-            border-radius: 50%;
-            /* Membuat gambar lingkaran */
-            object-fit: cover;
-            /* Menjaga proporsi wajah */
-            border: 5px solid #ddd;
-            /* Opsional: Menambahkan border */
-            padding: 5px;
-            /* Opsional: Memberi ruang di dalam border */
-        }
-
-        .card {
-            align-items: center;
-            /* Pusatkan konten di dalam kartu */
-            text-align: center;
-            background: none;
-        }
-
-        .card-body {
-            padding-top: 10px;
-        }
-    </style>
+  
 
 
 
 
     <!-- Footer-->
-    <footer class="bg-light py-5">
+    <footer class="bg-dark text-white py-5">
         <div class="container px-4 px-lg-5">
             <div class="small text-center text-muted">Copyright &copy; 2025 - Kelompok 9</div>
         </div>
