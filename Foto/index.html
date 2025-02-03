@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Smart Handwash</title>
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Smart Handwash</h1>
+            <p>Solusi Cerdas untuk Kebersihan Tangan Anda</p>
+        </header>
+        <section>
+            <h2>Deskripsi Produk</h2>
+            <p>Smart Handwash adalah perangkat otomatis yang mendeteksi tangan Anda dan mengeluarkan sabun secara otomatis, memastikan kebersihan tangan yang optimal tanpa sentuhan.</p>
+        </section>
+        <section>
+            <h2>Diagram Sistem</h2>
+            <div class="diagram">
+                <img src="Foto/Screenshot IOT.png" alt="Diagram Sistem Smart Handwash">
+            </div>
+        </section>
+        <section>
+            <h2>Cara Kerja</h2>
+            <ol>
+                <li>Sensor ultrasonik mendeteksi keberadaan tangan di bawah dispenser.</li>
+                <li>Ketika tangan terdeteksi, servo akan menggerakkan pompa untuk mengeluarkan sabun.</li>
+                <li>LCD menampilkan status operasi, seperti "Mengeluarkan Sabun" atau "Sistem Siap".</li>
+                <li>Tombol reset digunakan untuk mengatur ulang sistem setelah sejumlah penggunaan tertentu.</li>
+            </ol>
+        </section>
+        <section>
+            <h2>Keunggulan</h2>
+            <ul>
+                <li>Otomatis dan higienis tanpa sentuhan.</li>
+                <li>Mudah digunakan dengan indikator LCD yang informatif.</li>
+                <li>Desain efisien dengan penggunaan komponen berkualitas.</li>
+            </ul>
+        </section>
+        <button class="btn" onclick="openModal()">Lihat Code</button>
+        <div id="codeModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Code Program Arduino</h2>
+                <button class="copy-btn" onclick="copyCode()">Copy</button>
+                <pre id="arduinoCode"></pre>
+            </div>
+        </div>
+        <script>
+            function openModal() {
+                document.getElementById("codeModal").style.display = "block";
+                document.getElementById("arduinoCode").textContent = `
+// Kode Arduino untuk Smart Handwash
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+#include <Servo.h>
+
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+const int trigPin = 5, echoPin = 6, servoPin1 = 3, servoPin2 = 4, resetPin = 7;
+Servo myServo1, myServo2;
+long duration;
+int distance, pressCount = 0, pressLimit = 3;
+bool isHandDetected = false, isRefillRequired = false;
+unsigned long resetButtonStartTime = 0, lastScrollTime = 0;
+const unsigned long resetDelay = 3000, scrollDelay = 200;
+
+void setup() {
+    lcd.init(); lcd.backlight(); lcd.print("Sistem Siap");
+    pinMode(trigPin, OUTPUT); pinMode(echoPin, INPUT); pinMode(resetPin, INPUT_PULLUP);
+    myServo1.attach(servoPin1); myServo2.attach(servoPin2);
+    myServo1.write(90); myServo2.write(90);
+    Serial.begin(9600); delay(2000);
+}
+
+void loop() {
+    if (isRefillRequired) {
+        lcd.clear(); lcd.print("Isi Ulang Dulu");
+        return;
+    }
+    digitalWrite(trigPin, LOW); delayMicroseconds(2);
+    digitalWrite(trigPin, HIGH); delayMicroseconds(10);
+    digitalWrite(trigPin, LOW);
+    duration = pulseIn(echoPin, HIGH);
+    distance = duration * 0.034 / 2;
+
+    if (distance < 10 && !isHandDetected) {
+        isHandDetected = true;
+        if (pressCount < pressLimit) {
+            lcd.clear(); lcd.print("Mengeluarkan Sabun");
+            myServo1.write(300); myServo2.write(300); delay(1000);
+            myServo1.write(0); myServo2.write(0);
+            pressCount++;
+            if (pressCount >= pressLimit) {
+                isRefillRequired = true;
+                lcd.clear(); lcd.print("Lakukan Isi Ulang");
+            }
+        }
+    } else if (distance >= 10) {
+        isHandDetected = false;
+    }
+    delay(100);
+}
+                `;
+            }
+            function closeModal() {
+                document.getElementById("codeModal").style.display = "none";
+            }
+            function copyCode() {
+                navigator.clipboard.writeText(document.getElementById("arduinoCode").textContent)
+                .then(() => alert("Code copied to clipboard!"));
+            }
+        </script>
+    </body>
+</html>

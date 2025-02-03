@@ -10,13 +10,6 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-
-
- .portfolio-box img {
-  width: 100%; /* Menyesuaikan lebar gambar dengan ukuran kontainer */
-  height: auto; /* Menjaga rasio aspek gambar */
-}
-
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
