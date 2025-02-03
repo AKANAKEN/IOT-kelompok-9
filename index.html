@@ -33,7 +33,7 @@
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Component</a></li>
                     <li class="nav-item"><a class="nav-link" href="#steps">Steps</a></li>
                     <li class="nav-item"><a class="nav-link" href="#diagram">Diagram</a></li>
                     <li class="nav-item"><a class="nav-link" href="#demo">Demo</a></li>
@@ -58,7 +58,7 @@
         </div>
     </header>
     <!-- About-->
-    <section class="page-section bg-primary" id="about">
+    <section class="page-section bg-dark text-white" id="about">
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-lg-8 text-center">
@@ -102,13 +102,59 @@
             </div>
         </div>
     </section>
+
+    <section class="page-section bg-dark text-white" id="steps">
+        <div class="container px-4 px-lg-5">
+            <h2 class="text-center mt-0">Cara Kerja</h2>
+            <hr class="divider" />
+            <div class="row gx-4 gx-lg-5 text-center">
+                <div class="col-lg-3 col-md-6">
+                    <div class="mt-5">
+                        <div class="mb-2"><span class="step-number">1</span></div>
+                        <h3 class="h4 mb-2">Deteksi Tangan</h3>
+                        <p class="text-muted mb-0">Sensor ultrasonik mendeteksi keberadaan tangan di bawah dispenser.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="mt-5">
+                        <div class="mb-2"><span class="step-number">2</span></div>
+                        <h3 class="h4 mb-2">Pengeluaran Sabun</h3>
+                        <p class="text-muted mb-0">Ketika tangan terdeteksi, servo akan menggerakkan pompa untuk
+                            mengeluarkan sabun.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="mt-5">
+                        <div class="mb-2"><span class="step-number">3</span></div>
+                        <h3 class="h4 mb-2">Indikasi LCD</h3>
+                        <p class="text-muted mb-0">LCD menampilkan status operasi, seperti "Mengeluarkan Sabun" atau
+                            "Sistem Siap".</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="mt-5">
+                        <div class="mb-2"><span class="step-number">4</span></div>
+                        <h3 class="h4 mb-2">Reset Sistem</h3>
+                        <p class="text-muted mb-0">Tombol reset digunakan untuk mengatur ulang sistem setelah sejumlah
+                            penggunaan tertentu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Portfolio-->
+    <section class="page-section" id="steps">
+        <div class="container px-4 px-lg-5">
     <div id="portfolio">
         <div class="container-fluid p-0">
             <div class="row g-0">
+                <div><h2 class="text-center mt-0">Komponen</h2>
+                <hr class="divider" /> </div>
                 <div class="col-lg-4 col-sm-6">
                     <a class="portfolio-box" href="Foto/arduino.jpg" title="Arduino">
-                        <img class="img-fluid" src="Foto/arduino.jpg" alt="..." />
+                        <img class="img-fluid align-items-center" src="Foto/arduino.jpg" alt="..." />
                         <div class="portfolio-box-caption">
                             <div class="project-name">Arduino</div>
                             <div class="project-category text-white-50">Mikrokontroler utama yang mengontrol semua
@@ -171,54 +217,17 @@
                         </div>
                     </a>
                 </div>
-            </div>
+            </div></div>
         </div>
     </div>
-
-    <section class="page-section" id="steps">
-        <div class="container px-4 px-lg-5">
-            <h2 class="text-center mt-0">Cara Kerja</h2>
-            <hr class="divider" />
-            <div class="row gx-4 gx-lg-5 text-center">
-                <div class="col-lg-3 col-md-6">
-                    <div class="mt-5">
-                        <div class="mb-2"><span class="step-number">1</span></div>
-                        <h3 class="h4 mb-2">Deteksi Tangan</h3>
-                        <p class="text-muted mb-0">Sensor ultrasonik mendeteksi keberadaan tangan di bawah dispenser.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="mt-5">
-                        <div class="mb-2"><span class="step-number">2</span></div>
-                        <h3 class="h4 mb-2">Pengeluaran Sabun</h3>
-                        <p class="text-muted mb-0">Ketika tangan terdeteksi, servo akan menggerakkan pompa untuk
-                            mengeluarkan sabun.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="mt-5">
-                        <div class="mb-2"><span class="step-number">3</span></div>
-                        <h3 class="h4 mb-2">Indikasi LCD</h3>
-                        <p class="text-muted mb-0">LCD menampilkan status operasi, seperti "Mengeluarkan Sabun" atau
-                            "Sistem Siap".</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="mt-5">
-                        <div class="mb-2"><span class="step-number">4</span></div>
-                        <h3 class="h4 mb-2">Reset Sistem</h3>
-                        <p class="text-muted mb-0">Tombol reset digunakan untuk mengatur ulang sistem setelah sejumlah
-                            penggunaan tertentu.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+</section>
+   
 
     <section class="page-section bg-dark text-white text-center" id="diagram">
         <div class="container px-4 px-lg-5">
+            <div>
             <h2 class="mb-4">Diagram Sistem</h2>
+            <hr class="divider" /> </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
                     <img src="Foto/New Project.png" class="img-fluid rounded shadow"
@@ -301,7 +310,7 @@
         int messageLength = strlen(message);
         for (int i = 0; i < messageLength + 16; i++) {
 
-        
+
         // Cek tombol reset selama pengguliran
         if (digitalRead(resetPin) == LOW) {
         handleReset();
@@ -400,7 +409,9 @@
 
     <section class="page-section bg-light text-center" id="demo">
         <div class="container px-4 px-lg-5">
+            <div>
             <h2 class="mb-4">Demo Video</h2>
+            <hr class="divider" /> </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
                     <div class="ratio ratio-16x9">
@@ -415,9 +426,10 @@
     </section>
 
     <!-- Team Members Section -->
-    <section class="page-section" id="team">
+    <section class="page-section bg-dark text-white" id="team">
         <div class="container py-5">
             <h2 class="text-center mt-0">Our Team</h2>
+            <h5 class="text-center mt-0">Kelompok 9</h5>
             <hr class="divider" />
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 text-center">
 
